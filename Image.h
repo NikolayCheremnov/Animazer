@@ -1,14 +1,15 @@
 #pragma once
 
 #include <string>
+#include "IImageInitialize.h"
 
 using namespace std;
 
 class Image
 {
-private:
+protected:
 	string Path;
-
+	IImageInitialize *InitializeAction;
 public:
 	Image();
 	Image(string path);

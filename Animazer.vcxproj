@@ -140,12 +140,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Animazer.cpp" />
+    <ClCompile Include="BitMapImage.cpp" />
     <ClCompile Include="BitMapInitialize.cpp" />
     <ClCompile Include="IImageInitialize.cpp" />
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="Logger.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BitMapImage.h" />
     <ClInclude Include="BitMapInitialize.h" />
     <ClInclude Include="IImageInitialize.h" />
     <ClInclude Include="Image.h" />

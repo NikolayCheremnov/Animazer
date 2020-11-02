@@ -8,14 +8,14 @@ using namespace std;
 
 #include "BitMapInitialize.h"
 #include "Logger.h"
+#include "Image.h"
+#include "BitMapImage.h"
 
 using namespace std;
 
 int main()
 {
-    Logger* lg = new Logger();
-    BitMapInitialize *b = new BitMapInitialize();
-    b->Initialize("foo", lg);
+    Image* i = new BitMapImage("");
     return 0;
 }
 
