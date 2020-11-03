@@ -12,7 +12,12 @@ protected:
 	list<Image *> Images;
 
 public:
+	// constructors and destructor
 	DataSet();
-	void AddImage(Image *img);
+	
+	// setters and getters
+	list<Image*> GetImages() { return Images; }
+	// methods
+	void AddImage(Image *img); 
 };
 

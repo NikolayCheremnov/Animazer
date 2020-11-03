@@ -8,8 +8,10 @@ using namespace std;
 int main()
 {
     AnimazerSystem* s = new AnimazerSystem();
-    s->PerformImageInitialization("testData\\bad.txt");
-    s->PerformImageSaving("testData\\s_test.txt");
+    s->PerformImageInitialization("testData\\fake_image.txt");
+    s->PerformImageSaving("testData\\saved_image.txt");
+    s->PerformDataSetLoading("testData\\fake_dataset.txt");
+    s->PerformDataSetSaving("testData\\saved__dataset.txt");
     return 0;
 }
 

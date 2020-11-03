@@ -1,8 +1,6 @@
 #pragma once
 
 // common
-#include <string>
-#include "Logger.h"
 #include "IImageInitialize.h"
 // special
 #include "PlugImage.h"

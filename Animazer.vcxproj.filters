@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Исходные файлы\Plugs">
+      <UniqueIdentifier>{c014da27-fbb9-4632-b70c-4f857509fee2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Plugs">
+      <UniqueIdentifier>{c4f988fc-f96b-4705-816f-d0295ccba3af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Interfaces">
+      <UniqueIdentifier>{4103384a-d0e0-4406-b10a-548f10343c63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Interfaces">
+      <UniqueIdentifier>{0ad942cb-920b-4669-b87c-2345a5744ac6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Animazer.cpp">
@@ -24,29 +36,41 @@
     <ClCompile Include="DataSet.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="IDataSetSaver.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="PlugImage.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="PlugImageInitialize.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="IImageInitialize.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="Image.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="AnimazerSystem.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="IImageSave.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="PlugDataSet.cpp">
+      <Filter>Исходные файлы\Plugs</Filter>
+    </ClCompile>
+    <ClCompile Include="PlugImage.cpp">
+      <Filter>Исходные файлы\Plugs</Filter>
+    </ClCompile>
+    <ClCompile Include="PlugImageInitialize.cpp">
+      <Filter>Исходные файлы\Plugs</Filter>
     </ClCompile>
     <ClCompile Include="PlugImageSave.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\Plugs</Filter>
+    </ClCompile>
+    <ClCompile Include="IImageInitialize.cpp">
+      <Filter>Исходные файлы\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="IImageSave.cpp">
+      <Filter>Исходные файлы\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="IDataSetSave.cpp">
+      <Filter>Исходные файлы\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="PlugDataSetSave.cpp">
+      <Filter>Исходные файлы\Plugs</Filter>
+    </ClCompile>
+    <ClCompile Include="IDataSetLoad.cpp">
+      <Filter>Исходные файлы\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="PlugDataSetLoad.cpp">
+      <Filter>Исходные файлы\Plugs</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -59,26 +83,38 @@
     <ClInclude Include="DataSet.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="PlugImage.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="PlugImageInitialize.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="IDataSetSaver.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="IImageInitialize.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="AnimazerSystem.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="IImageSave.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="PlugDataSet.h">
+      <Filter>Файлы заголовков\Plugs</Filter>
+    </ClInclude>
+    <ClInclude Include="PlugImage.h">
+      <Filter>Файлы заголовков\Plugs</Filter>
+    </ClInclude>
+    <ClInclude Include="PlugImageInitialize.h">
+      <Filter>Файлы заголовков\Plugs</Filter>
     </ClInclude>
     <ClInclude Include="PlugImageSave.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\Plugs</Filter>
+    </ClInclude>
+    <ClInclude Include="IDataSetSave.h">
+      <Filter>Файлы заголовков\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IImageInitialize.h">
+      <Filter>Файлы заголовков\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IImageSave.h">
+      <Filter>Файлы заголовков\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="PlugDataSetSave.h">
+      <Filter>Файлы заголовков\Plugs</Filter>
+    </ClInclude>
+    <ClInclude Include="IDataSetLoad.h">
+      <Filter>Файлы заголовков\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="PlugDataSetLoad.h">
+      <Filter>Файлы заголовков\Plugs</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

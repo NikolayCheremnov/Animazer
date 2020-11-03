@@ -4,9 +4,9 @@
 #include <string>
 // common
 #include "Logger.h"
-// special
 #include "Image.h"
 
+// image save interface
 class IImageSave
 {
 public:

@@ -141,21 +141,29 @@
   <ItemGroup>
     <ClCompile Include="Animazer.cpp" />
     <ClCompile Include="AnimazerSystem.cpp" />
+    <ClCompile Include="IDataSetLoad.cpp" />
     <ClCompile Include="IImageInitialize.cpp" />
     <ClCompile Include="IImageSave.cpp" />
     <ClCompile Include="Image.cpp" />
+    <ClCompile Include="PlugDataSet.cpp" />
+    <ClCompile Include="PlugDataSetLoad.cpp" />
+    <ClCompile Include="PlugDataSetSave.cpp" />
     <ClCompile Include="PlugImage.cpp" />
     <ClCompile Include="PlugImageInitialize.cpp" />
     <ClCompile Include="DataSet.cpp" />
-    <ClCompile Include="IDataSetSaver.cpp" />
+    <ClCompile Include="IDataSetSave.cpp" />
     <ClCompile Include="Logger.cpp" />
     <ClCompile Include="PlugImageSave.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AnimazerSystem.h" />
-    <ClInclude Include="IDataSetSaver.h" />
+    <ClInclude Include="IDataSetLoad.h" />
+    <ClInclude Include="IDataSetSave.h" />
     <ClInclude Include="IImageInitialize.h" />
     <ClInclude Include="IImageSave.h" />
+    <ClInclude Include="PlugDataSet.h" />
+    <ClInclude Include="PlugDataSetLoad.h" />
+    <ClInclude Include="PlugDataSetSave.h" />
     <ClInclude Include="PlugImage.h" />
     <ClInclude Include="PlugImageInitialize.h" />
     <ClInclude Include="DataSet.h" />

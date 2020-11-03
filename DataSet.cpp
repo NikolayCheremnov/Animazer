@@ -2,6 +2,7 @@
 
 DataSet::DataSet()
 {
+	ID = "some_id";
 }
 
 void DataSet::AddImage(Image* img)

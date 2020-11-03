@@ -1,10 +1,10 @@
 #pragma once
 
+// external
 #include <string>
 
 // common
 #include "Logger.h"
-// special
 #include "Image.h"
 
 // image initialize interface

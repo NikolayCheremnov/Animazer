@@ -1,7 +1,8 @@
 #pragma once
 
-// common
+// external
 #include <string>
+// common
 #include "IImageSave.h"
 // special
 #include "PlugImage.h"
