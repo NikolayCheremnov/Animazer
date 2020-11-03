@@ -31,7 +31,7 @@ void Logger::redirect_clog_to_console()
 	stream_buffer_file = nullptr;
 }
 
-void Logger::log(const char* function, string class_role, string method_role, string id)
+void Logger::log(const char* function, string class_role, string method_role, string id, string msg)
 {
 	string buf(function);
 	int colonPos = buf.find(':');
@@ -41,7 +41,20 @@ void Logger::log(const char* function, string class_role, string method_role, st
 	clog << '\t' << class_name << '_' << class_role << '_' << id << ' : ' << method_name;
 	if (method_role.length() != 0)
 		clog << '_' << method_role;
-	clog << endl;
+	clog << ": " << msg << endl;
  }
+
+void Logger::err_log(const char* function, string class_role, string method_role, string id, const char* what)
+{
+	string buf(function);
+	int colonPos = buf.find(':');
+	string class_name = buf.substr(0, colonPos);
+	string method_name = buf.substr(colonPos + 2);
+	// output
+	clog << "\terror:\t" << class_name << '_' << class_role << '_' << id << ' : ' << method_name;
+	if (method_role.length() != 0)
+		clog << '_' << method_role;
+	clog << ": " << what << endl;
+}
 
 

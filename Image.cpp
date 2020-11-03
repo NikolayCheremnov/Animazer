@@ -2,9 +2,11 @@
 
 Image::Image()
 {
+	ID = "undefined";
 }
 
 Image::Image(string path)
 {
-	Path = path;
+	ID = "undefined";
+	this->path = path;
 }

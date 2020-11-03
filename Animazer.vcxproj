@@ -140,18 +140,31 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Animazer.cpp" />
-    <ClCompile Include="BitMapImage.cpp" />
-    <ClCompile Include="BitMapInitialize.cpp" />
+    <ClCompile Include="AnimazerSystem.cpp" />
     <ClCompile Include="IImageInitialize.cpp" />
+    <ClCompile Include="IImageSave.cpp" />
     <ClCompile Include="Image.cpp" />
+    <ClCompile Include="PlugImage.cpp" />
+    <ClCompile Include="PlugImageInitialize.cpp" />
+    <ClCompile Include="DataSet.cpp" />
+    <ClCompile Include="IDataSetSaver.cpp" />
     <ClCompile Include="Logger.cpp" />
+    <ClCompile Include="PlugImageSave.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BitMapImage.h" />
-    <ClInclude Include="BitMapInitialize.h" />
+    <ClInclude Include="AnimazerSystem.h" />
+    <ClInclude Include="IDataSetSaver.h" />
     <ClInclude Include="IImageInitialize.h" />
+    <ClInclude Include="IImageSave.h" />
+    <ClInclude Include="PlugImage.h" />
+    <ClInclude Include="PlugImageInitialize.h" />
+    <ClInclude Include="DataSet.h" />
     <ClInclude Include="Image.h" />
     <ClInclude Include="Logger.h" />
+    <ClInclude Include="PlugImageSave.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

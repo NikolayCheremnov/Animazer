@@ -1,21 +1,15 @@
 ﻿// Animazer.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
-#include <iostream>
-#include <fstream>
-
-using namespace std;
-
-#include "BitMapInitialize.h"
-#include "Logger.h"
-#include "Image.h"
-#include "BitMapImage.h"
+#include "AnimazerSystem.h"
 
 using namespace std;
 
 int main()
 {
-    Image* i = new BitMapImage("");
+    AnimazerSystem* s = new AnimazerSystem();
+    s->PerformImageInitialization("testData\\bad.txt");
+    s->PerformImageSaving("testData\\s_test.txt");
     return 0;
 }
 

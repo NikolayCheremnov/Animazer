@@ -2,12 +2,15 @@
 
 #include <string>
 
+// common
 #include "Logger.h"
+// special
+#include "Image.h"
 
 // image initialize interface
 class IImageInitialize
 {
 public:
-	virtual void Initialize(std::string path, Logger *lg) = 0;
+	virtual Image* Initialize(std::string path, Logger *lg) = 0;
 };
 
