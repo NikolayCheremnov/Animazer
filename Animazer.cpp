@@ -7,8 +7,8 @@ using namespace std;
 
 int main()
 {
+    AnimazerSystem* s = new AnimazerSystem();
     try {
-        AnimazerSystem* s = new AnimazerSystem();
         s->PerformImageInitialization("testData\\fake_image.txt");
         s->PerformImageSaving("testData\\saved_image.txt");
         s->PerformDataSetLoading("testData\\fake_dataset.txt");
@@ -20,6 +20,7 @@ int main()
     catch (exception ex) {
         cout << ex.what();
     }
+    delete s;
     return 0;
 }
 
