@@ -38,10 +38,10 @@ void Logger::log(const char* function, string class_role, string method_role, st
 	string class_name = buf.substr(0, colonPos);
 	string method_name = buf.substr(colonPos + 2);
 	// output
-	clog << '\t' << class_name << '_' << class_role << '_' << id << ' : ' << method_name;
+	clog << "log: " << class_name << '_' << class_role << '_' << id << " : " << method_name;
 	if (method_role.length() != 0)
 		clog << '_' << method_role;
-	clog << ": " << msg << endl;
+	clog << " : " << msg << endl;
  }
 
 void Logger::err_log(const char* function, string class_role, string method_role, string id, const char* what)
@@ -51,10 +51,10 @@ void Logger::err_log(const char* function, string class_role, string method_role
 	string class_name = buf.substr(0, colonPos);
 	string method_name = buf.substr(colonPos + 2);
 	// output
-	clog << "\terror:\t" << class_name << '_' << class_role << '_' << id << ' : ' << method_name;
+	clog << "error: " << class_name << '_' << class_role << '_' << id << " : " << method_name;
 	if (method_role.length() != 0)
 		clog << '_' << method_role;
-	clog << ": " << what << endl;
+	clog << " : " << what << endl;
 }
 
 

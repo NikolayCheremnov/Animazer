@@ -7,14 +7,19 @@ using namespace std;
 
 int main()
 {
-    AnimazerSystem* s = new AnimazerSystem();
-    s->PerformImageInitialization("testData\\fake_image.txt");
-    s->PerformImageSaving("testData\\saved_image.txt");
-    s->PerformDataSetLoading("testData\\fake_dataset.txt");
-    s->PerformDataSetSaving("testData\\saved__dataset.txt");
-    s->PerformImageProcessing();
-    s->PerformProcessorPreparing();
-    s->PerformImageProcessing();
+    try {
+        AnimazerSystem* s = new AnimazerSystem();
+        s->PerformImageInitialization("testData\\fake_image.txt");
+        s->PerformImageSaving("testData\\saved_image.txt");
+        s->PerformDataSetLoading("testData\\fake_dataset.txt");
+        s->PerformDataSetSaving("testData\\saved__dataset.txt");
+        s->PerformImageProcessing();
+        s->PerformProcessorPreparing();
+        s->PerformImageProcessing();
+    }
+    catch (exception ex) {
+        cout << ex.what();
+    }
     return 0;
 }
 

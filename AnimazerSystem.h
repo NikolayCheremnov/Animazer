@@ -9,6 +9,7 @@
 #include "IDataSetSave.h"
 #include "IDataSetLoad.h"
 #include "IProcessor.h"
+#include "DataSetController.h"
 
 // special
 #include "PlugImage.h"
@@ -30,9 +31,7 @@ private:
 	IImageInitialize* InitializeImageAction = nullptr;
 	IImageSave* SaveImageAction = nullptr;
 	// with data set
-	DataSet* dsObj = nullptr;
-	IDataSetSave* SaveDataSetAction = nullptr;
-	IDataSetLoad* LoadDataSetAction = nullptr;
+	DataSetController* dscObj = nullptr;
 	// with processor
 	IProcessor* procObj = nullptr;
 	
