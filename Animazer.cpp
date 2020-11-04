@@ -12,6 +12,9 @@ int main()
     s->PerformImageSaving("testData\\saved_image.txt");
     s->PerformDataSetLoading("testData\\fake_dataset.txt");
     s->PerformDataSetSaving("testData\\saved__dataset.txt");
+    s->PerformImageProcessing();
+    s->PerformProcessorPreparing();
+    s->PerformImageProcessing();
     return 0;
 }
 

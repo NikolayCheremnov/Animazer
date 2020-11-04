@@ -14,7 +14,7 @@ protected:
 public:
 	// constructors and destructor
 	DataSet();
-	
+	 
 	// setters and getters
 	list<Image*> GetImages() { return Images; }
 	// methods

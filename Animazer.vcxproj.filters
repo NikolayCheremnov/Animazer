@@ -72,6 +72,12 @@
     <ClCompile Include="PlugDataSetLoad.cpp">
       <Filter>Исходные файлы\Plugs</Filter>
     </ClCompile>
+    <ClCompile Include="IProcessor.cpp">
+      <Filter>Исходные файлы\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="PlugProcessor.cpp">
+      <Filter>Исходные файлы\Plugs</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Image.h">
@@ -114,6 +120,12 @@
       <Filter>Файлы заголовков\Interfaces</Filter>
     </ClInclude>
     <ClInclude Include="PlugDataSetLoad.h">
+      <Filter>Файлы заголовков\Plugs</Filter>
+    </ClInclude>
+    <ClInclude Include="IProcessor.h">
+      <Filter>Файлы заголовков\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="PlugProcessor.h">
       <Filter>Файлы заголовков\Plugs</Filter>
     </ClInclude>
   </ItemGroup>

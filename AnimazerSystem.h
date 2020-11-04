@@ -8,6 +8,7 @@
 #include "DataSet.h"
 #include "IDataSetSave.h"
 #include "IDataSetLoad.h"
+#include "IProcessor.h"
 
 // special
 #include "PlugImage.h"
@@ -16,6 +17,7 @@
 #include "PlugDataSet.h"
 #include "PlugDataSetSave.h"
 #include "PlugDataSetLoad.h"
+#include "PlugProcessor.h"
 
 //	main system class - aggregation all main abstractions
 class AnimazerSystem
@@ -31,6 +33,8 @@ private:
 	DataSet* dsObj = nullptr;
 	IDataSetSave* SaveDataSetAction = nullptr;
 	IDataSetLoad* LoadDataSetAction = nullptr;
+	// with processor
+	IProcessor* procObj = nullptr;
 	
 public:
 	// constructors and destructor
@@ -42,5 +46,7 @@ public:
 	void PerformImageSaving(string path);
 	void PerformDataSetSaving(string path);
 	void PerformDataSetLoading(string path);
+	void PerformProcessorPreparing();
+	string PerformImageProcessing();
 };
 

@@ -10,6 +10,7 @@ AnimazerSystem::AnimazerSystem()
 	SaveImageAction = new PlugImageSave();
 	SaveDataSetAction = new PlugDataSetSave();
 	LoadDataSetAction = new PlugDataSetLoad();
+	procObj = new PlugProcessor();
 }
 
 AnimazerSystem::~AnimazerSystem()
@@ -51,4 +52,14 @@ void AnimazerSystem::PerformDataSetLoading(string path)
 		delete dsObj;
 	dsObj = LoadDataSetAction->Load(path, lg);
 
+}
+
+void AnimazerSystem::PerformProcessorPreparing()
+{
+	procObj->ProcessorPreparing(dsObj, lg);
+}
+
+string AnimazerSystem::PerformImageProcessing()
+{
+	return procObj->Process(imgObj, lg);
 }

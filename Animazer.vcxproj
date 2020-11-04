@@ -145,6 +145,7 @@
     <ClCompile Include="IImageInitialize.cpp" />
     <ClCompile Include="IImageSave.cpp" />
     <ClCompile Include="Image.cpp" />
+    <ClCompile Include="IProcessor.cpp" />
     <ClCompile Include="PlugDataSet.cpp" />
     <ClCompile Include="PlugDataSetLoad.cpp" />
     <ClCompile Include="PlugDataSetSave.cpp" />
@@ -154,6 +155,7 @@
     <ClCompile Include="IDataSetSave.cpp" />
     <ClCompile Include="Logger.cpp" />
     <ClCompile Include="PlugImageSave.cpp" />
+    <ClCompile Include="PlugProcessor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AnimazerSystem.h" />
@@ -161,6 +163,7 @@
     <ClInclude Include="IDataSetSave.h" />
     <ClInclude Include="IImageInitialize.h" />
     <ClInclude Include="IImageSave.h" />
+    <ClInclude Include="IProcessor.h" />
     <ClInclude Include="PlugDataSet.h" />
     <ClInclude Include="PlugDataSetLoad.h" />
     <ClInclude Include="PlugDataSetSave.h" />
@@ -170,6 +173,7 @@
     <ClInclude Include="Image.h" />
     <ClInclude Include="Logger.h" />
     <ClInclude Include="PlugImageSave.h" />
+    <ClInclude Include="PlugProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
