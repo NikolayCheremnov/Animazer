@@ -5,19 +5,13 @@
 #include "Image.h"
 #include "IImageInitialize.h"
 #include "IImageSave.h"
-#include "DataSet.h"
-#include "IDataSetSave.h"
-#include "IDataSetLoad.h"
 #include "IProcessor.h"
 #include "DataSetController.h"
 
 // special
 #include "PlugImage.h"
 #include "PlugImageInitialize.h"
-#include "PlugImageSave.h"
-#include "PlugDataSet.h"
-#include "PlugDataSetSave.h"
-#include "PlugDataSetLoad.h"
+#include "PlugImageSave.h""
 #include "PlugProcessor.h"
 
 //	main system class - aggregation all main abstractions
