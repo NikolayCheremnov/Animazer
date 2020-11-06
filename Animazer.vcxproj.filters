@@ -78,6 +78,9 @@
     <ClCompile Include="PlugProcessor.cpp">
       <Filter>Исходные файлы\Plugs</Filter>
     </ClCompile>
+    <ClCompile Include="ProxyDataSetLoad.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Image.h">
@@ -127,6 +130,9 @@
     </ClInclude>
     <ClInclude Include="PlugProcessor.h">
       <Filter>Файлы заголовков\Plugs</Filter>
+    </ClInclude>
+    <ClInclude Include="ProxyDataSetLoad.h">
+      <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

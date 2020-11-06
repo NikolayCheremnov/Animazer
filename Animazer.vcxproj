@@ -156,6 +156,7 @@
     <ClCompile Include="Logger.cpp" />
     <ClCompile Include="PlugImageSave.cpp" />
     <ClCompile Include="PlugProcessor.cpp" />
+    <ClCompile Include="ProxyDataSetLoad.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AnimazerSystem.h" />
@@ -174,6 +175,7 @@
     <ClInclude Include="Logger.h" />
     <ClInclude Include="PlugImageSave.h" />
     <ClInclude Include="PlugProcessor.h" />
+    <ClInclude Include="ProxyDataSetLoad.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
