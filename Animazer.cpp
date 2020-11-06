@@ -11,7 +11,31 @@ using namespace std;
 
 int main()
 {
-    AnimazerSystem* s = new AnimazerSystem("plug_animazer", new Logger(),
+    AnimazerSystem* s;
+    // proxy banned
+    cout << "1. Proxy banned" << endl;
+    s = new AnimazerSystem("plug_animazer_with_proxy", new Logger(),
+        new PlugImageInitialize(), new PlugImageSave(),
+        new PlugDataSetSave(), new ProxyDataSetLoad(),
+        new PlugProcessor());
+    try {
+        s->PerformImageInitialization("testData\\fake_image.txt");
+        s->PerformImageSaving("testData\\saved_image.txt");
+        s->PerformDataSetLoading("testData\\fake_dataset.txt"); // first loading
+        s->PerformDataSetLoading("testData\\fake_dataset.txt"); // try load without savings
+        s->PerformDataSetSaving("testData\\saved__dataset.txt");
+        s->PerformImageProcessing();
+        s->PerformProcessorPreparing();
+        s->PerformImageProcessing();
+    }
+    catch (exception ex) {
+        cout << ex.what() << endl;
+    }
+    delete s;
+    
+    // good test (with proxy)
+    cout << "2. Proxy accept" << endl;
+    s = new AnimazerSystem("plug_animazer_with_proxy", new Logger(),
         new PlugImageInitialize(), new PlugImageSave(),
         new PlugDataSetSave(), new ProxyDataSetLoad(),
         new PlugProcessor());
@@ -25,7 +49,26 @@ int main()
         s->PerformImageProcessing();
     }
     catch (exception ex) {
-        cout << ex.what();
+        cout << ex.what() << endl;
+    }
+    delete s;
+
+    // very good test wirhout proxy
+    cout << "3. Without proxy but very good" << endl;
+    s = new AnimazerSystem("plug_animazer_with_proxy", new Logger(),
+        new PlugImageInitialize(), new PlugImageSave(),
+        new PlugDataSetSave(), new PlugDataSetLoad(),
+        new PlugProcessor());
+    try {
+        s->PerformImageInitialization("testData\\fake_image.txt");
+        s->PerformImageSaving("testData\\saved_image.txt");
+        s->PerformDataSetLoading("testData\\fake_dataset.txt");
+        s->PerformDataSetSaving("testData\\saved__dataset.txt");
+        s->PerformProcessorPreparing();
+        s->PerformImageProcessing();
+    }
+    catch (exception ex) {
+        cout << ex.what() << endl;
     }
     delete s;
     return 0;
