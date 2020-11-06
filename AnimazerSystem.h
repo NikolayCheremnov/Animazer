@@ -6,13 +6,18 @@
 #include "IImageInitialize.h"
 #include "IImageSave.h"
 #include "IProcessor.h"
-#include "DataSetController.h"
+#include "DataSet.h"
+#include "IDataSetLoad.h"
+#include "IDataSetSave.h"
 
 // special
 #include "PlugImage.h"
 #include "PlugImageInitialize.h"
 #include "PlugImageSave.h""
 #include "PlugProcessor.h"
+#include "PlugDataSet.h"
+#include "PlugDataSetSave.h"
+#include "PlugDataSetLoad.h"
 
 //	main system class - aggregation all main abstractions
 class AnimazerSystem
@@ -25,13 +30,19 @@ private:
 	IImageInitialize* InitializeImageAction = nullptr;
 	IImageSave* SaveImageAction = nullptr;
 	// with data set
-	DataSetController* dscObj = nullptr;
+	DataSet* dsObj = nullptr;
+	IDataSetSave* SaveDataSetAction = nullptr;
+	IDataSetLoad* LoadDataSetAction = nullptr; 
 	// with processor
 	IProcessor* procObj = nullptr;
 	
 public:
 	// constructors and destructor
-	AnimazerSystem();
+	AnimazerSystem();	// basic plug constructor
+	AnimazerSystem(string ID, Logger* lg,
+		IImageInitialize* InitializeImageAction, IImageSave* SaveImageAction,
+		IDataSetSave* SaveDataSetAction, IDataSetLoad* LoadDataSetAction,
+		IProcessor* procObj);													// polymorphic custom constructor
 	~AnimazerSystem();
 
 	// perform methods

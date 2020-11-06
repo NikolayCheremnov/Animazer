@@ -7,7 +7,10 @@ using namespace std;
 
 int main()
 {
-    AnimazerSystem* s = new AnimazerSystem();
+    AnimazerSystem* s = new AnimazerSystem("plug_animazer", new Logger(),
+        new PlugImageInitialize(), new PlugImageSave(),
+        new PlugDataSetSave(), new PlugDataSetLoad(),
+        new PlugProcessor());
     try {
         s->PerformImageInitialization("testData\\fake_image.txt");
         s->PerformImageSaving("testData\\saved_image.txt");

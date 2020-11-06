@@ -4,12 +4,25 @@
 AnimazerSystem::AnimazerSystem()
 {
 	ID = "some_id";
+	// objects
 	lg = new Logger();
-	dscObj = new DataSetController();
+	procObj = new PlugProcessor();
 	// actions
 	InitializeImageAction = new PlugImageInitialize();
 	SaveImageAction = new PlugImageSave();
-	procObj = new PlugProcessor();
+	SaveDataSetAction = new PlugDataSetSave();
+	LoadDataSetAction = new PlugDataSetLoad();
+}
+
+AnimazerSystem::AnimazerSystem(string ID, Logger* lg, IImageInitialize* InitializeImageAction, IImageSave* SaveImageAction, IDataSetSave* SaveDataSetAction, IDataSetLoad* LoadDataSetAction, IProcessor* procObj)
+{
+	this->ID = ID;
+	this->lg = lg;
+	this->InitializeImageAction = InitializeImageAction;
+	this->SaveImageAction = SaveImageAction;
+	this->SaveDataSetAction = SaveDataSetAction;
+	this->LoadDataSetAction = LoadDataSetAction;
+	this->procObj = procObj;
 }
 
 AnimazerSystem::~AnimazerSystem()
@@ -21,15 +34,19 @@ AnimazerSystem::~AnimazerSystem()
 		delete lg;
 	if (procObj != nullptr)
 		delete procObj;
-	if (dscObj != nullptr)
-		delete dscObj;
+	if (dsObj != nullptr)
+		delete dsObj;
 	// actions
 	if (InitializeImageAction != nullptr)
 		delete InitializeImageAction;
 	if (SaveImageAction != nullptr)
 		delete SaveImageAction;
+	if (SaveDataSetAction != nullptr)
+		delete SaveDataSetAction;
+	if (LoadDataSetAction != nullptr)
+		delete LoadDataSetAction;
 }
-
+ 
 void AnimazerSystem::PerformImageInitialization(string path)
 {
 	if (imgObj != nullptr)
@@ -44,17 +61,17 @@ void AnimazerSystem::PerformImageSaving(string path)
 
 void AnimazerSystem::PerformDataSetSaving(string path)
 {
-	dscObj->PerformDataSetSaving(path, lg);
+	SaveDataSetAction->Save(path, dsObj, lg);
 }
 
 void AnimazerSystem::PerformDataSetLoading(string path)
 {
-	dscObj->PerformDataSetLoading(path, lg);
+	dsObj = LoadDataSetAction->Load(path, lg);
 }
 
 void AnimazerSystem::PerformProcessorPreparing()
 {
-	procObj->ProcessorPreparing(dscObj->GetDataSet(), lg);
+	procObj->ProcessorPreparing(dsObj, lg);
 }
 
 string AnimazerSystem::PerformImageProcessing()
