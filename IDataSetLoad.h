@@ -10,6 +10,6 @@
 class IDataSetLoad
 {
 public:
-	virtual DataSet* Load(std::string path, Logger* lg) = 0;
+	virtual DataSet* Load(std::string path, DataSet* dsObj, Logger* lg) = 0;
 };
 

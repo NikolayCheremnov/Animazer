@@ -12,6 +12,6 @@ class PlugDataSetLoad :
     public IDataSetLoad
 {
 public:
-    DataSet* Load(string path, Logger* lg);
+    DataSet* Load(string path, DataSet* loaded, Logger* lg);
 };
 

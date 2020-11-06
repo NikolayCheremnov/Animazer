@@ -66,7 +66,7 @@ void AnimazerSystem::PerformDataSetSaving(string path)
 
 void AnimazerSystem::PerformDataSetLoading(string path)
 {
-	dsObj = LoadDataSetAction->Load(path, lg);
+	dsObj = LoadDataSetAction->Load(path, dsObj, lg);
 }
 
 void AnimazerSystem::PerformProcessorPreparing()

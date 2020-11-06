@@ -1,6 +1,6 @@
 #include "PlugDataSetLoad.h"
 
-DataSet* PlugDataSetLoad::Load(string path, Logger* lg)
+DataSet* PlugDataSetLoad::Load(string path, DataSet* dsObj, Logger* lg)
 {
 	try {
 		PlugDataSet* loaded = new PlugDataSet();
