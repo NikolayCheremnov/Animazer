@@ -17,7 +17,7 @@
 #include "PlugProcessor.h"
 #include "PlugDataSet.h"
 #include "PlugDataSetSave.h"
-#include "PlugDataSetLoad.h"
+#include "DataSetLoadAdapter.h"
 
 //	main system class - aggregation all main abstractions
 class AnimazerSystem

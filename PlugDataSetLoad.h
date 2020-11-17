@@ -1,17 +1,16 @@
 #pragma once
 
 // common
-#include "IDataSetLoad.h"
+#include "Logger.h"
 
 //special
 #include "PlugDataSet.h"
 
 using namespace std;
 
-class PlugDataSetLoad :
-    public IDataSetLoad
+class PlugDataSetLoad 
 {
 public:
-    DataSet* Load(string path, DataSet* dsObj, Logger* lg);
+    DataSet* Load(string path, Logger* lg);
 };
 

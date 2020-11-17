@@ -11,7 +11,7 @@ AnimazerSystem::AnimazerSystem()
 	InitializeImageAction = new PlugImageInitialize();
 	SaveImageAction = new PlugImageSave();
 	SaveDataSetAction = new PlugDataSetSave();
-	LoadDataSetAction = new PlugDataSetLoad();
+	LoadDataSetAction = new DataSetLoadAdapter();
 }
 
 AnimazerSystem::AnimazerSystem(string ID, Logger* lg, IImageInitialize* InitializeImageAction, IImageSave* SaveImageAction, IDataSetSave* SaveDataSetAction, IDataSetLoad* LoadDataSetAction, IProcessor* procObj)

@@ -4,7 +4,7 @@
 #include "IDataSetLoad.h"
 
 // special
-#include "PlugDataSetLoad.h"
+#include "DataSetLoadAdapter.h"
 
 class ProxyDataSetLoad :
     public IDataSetLoad

@@ -81,6 +81,9 @@
     <ClCompile Include="ProxyDataSetLoad.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="DataSetLoadAdapter.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Image.h">
@@ -132,6 +135,9 @@
       <Filter>Файлы заголовков\Plugs</Filter>
     </ClInclude>
     <ClInclude Include="ProxyDataSetLoad.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="DataSetLoadAdapter.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

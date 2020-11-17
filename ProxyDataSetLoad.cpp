@@ -3,7 +3,7 @@
 ProxyDataSetLoad::ProxyDataSetLoad()
 {
 	ID = "someID";
-	LoadDataSetAction = new PlugDataSetLoad();
+	LoadDataSetAction = new DataSetLoadAdapter();
 }
 
 ProxyDataSetLoad::ProxyDataSetLoad(string ID, IDataSetLoad* LoadDataSetAction)

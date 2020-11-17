@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="Animazer.cpp" />
     <ClCompile Include="AnimazerSystem.cpp" />
+    <ClCompile Include="DataSetLoadAdapter.cpp" />
     <ClCompile Include="IDataSetLoad.cpp" />
     <ClCompile Include="IImageInitialize.cpp" />
     <ClCompile Include="IImageSave.cpp" />
@@ -160,6 +161,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AnimazerSystem.h" />
+    <ClInclude Include="DataSetLoadAdapter.h" />
     <ClInclude Include="IDataSetLoad.h" />
     <ClInclude Include="IDataSetSave.h" />
     <ClInclude Include="IImageInitialize.h" />

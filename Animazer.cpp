@@ -57,7 +57,7 @@ int main()
     cout << "3. Without proxy but very good" << endl;
     s = new AnimazerSystem("plug_animazer_with_proxy", new Logger(),
         new PlugImageInitialize(), new PlugImageSave(),
-        new PlugDataSetSave(), new PlugDataSetLoad(),
+        new PlugDataSetSave(), new DataSetLoadAdapter(),
         new PlugProcessor());
     try {
         s->PerformImageInitialization("testData\\fake_image.txt");
@@ -71,6 +71,7 @@ int main()
         cout << ex.what() << endl;
     }
     delete s;
+
     return 0;
 }
 
