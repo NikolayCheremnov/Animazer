@@ -84,6 +84,12 @@
     <ClCompile Include="DataSetLoadAdapter.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="ProcessorVerifier.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="PlugProcessorVerifier.cpp">
+      <Filter>Исходные файлы\Plugs</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Image.h">
@@ -139,6 +145,12 @@
     </ClInclude>
     <ClInclude Include="DataSetLoadAdapter.h">
       <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="ProcessorVerifier.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="PlugProcessorVerifier.h">
+      <Filter>Файлы заголовков\Plugs</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

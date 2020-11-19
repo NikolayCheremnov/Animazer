@@ -52,5 +52,9 @@ public:
 	void PerformDataSetLoading(string path);
 	void PerformProcessorPreparing();
 	string PerformImageProcessing();
+
+	// setters and getters
+	IProcessor* getProcessor() { return procObj; }
+	void setProcessor(IProcessor* procObj) { this->procObj = procObj; } // possible memory leaks!!!
 };
 
