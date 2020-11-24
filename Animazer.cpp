@@ -7,6 +7,9 @@
 // special
 #include "ProxyDataSetLoad.h"
 #include "PlugProcessorVerifier.h"
+#include "PlugImageInitialize.h"
+#include "PlugDataSetSave.h"
+#include "PlugProcessor.h"
 
 using namespace std;
 
@@ -16,7 +19,7 @@ int main()
     // proxy banned
     cout << "Adapter, decorator" << endl;
     s = new AnimazerSystem("TestingStructuralPatterns", new Logger(),
-        new PlugImageInitialize(), new PlugImageSave(),
+        new PlugImageInitialize(),
         new PlugDataSetSave(), new ProxyDataSetLoad(),
         new PlugProcessor());
     try {

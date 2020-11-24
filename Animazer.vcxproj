@@ -144,7 +144,6 @@
     <ClCompile Include="DataSetLoadAdapter.cpp" />
     <ClCompile Include="IDataSetLoad.cpp" />
     <ClCompile Include="IImageInitialize.cpp" />
-    <ClCompile Include="IImageSave.cpp" />
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="IProcessor.cpp" />
     <ClCompile Include="PlugDataSet.cpp" />
@@ -155,7 +154,6 @@
     <ClCompile Include="DataSet.cpp" />
     <ClCompile Include="IDataSetSave.cpp" />
     <ClCompile Include="Logger.cpp" />
-    <ClCompile Include="PlugImageSave.cpp" />
     <ClCompile Include="PlugProcessor.cpp" />
     <ClCompile Include="PlugProcessorVerifier.cpp" />
     <ClCompile Include="ProcessorVerifier.cpp" />
@@ -167,7 +165,6 @@
     <ClInclude Include="IDataSetLoad.h" />
     <ClInclude Include="IDataSetSave.h" />
     <ClInclude Include="IImageInitialize.h" />
-    <ClInclude Include="IImageSave.h" />
     <ClInclude Include="IProcessor.h" />
     <ClInclude Include="PlugDataSet.h" />
     <ClInclude Include="PlugDataSetLoad.h" />
@@ -177,7 +174,6 @@
     <ClInclude Include="DataSet.h" />
     <ClInclude Include="Image.h" />
     <ClInclude Include="Logger.h" />
-    <ClInclude Include="PlugImageSave.h" />
     <ClInclude Include="PlugProcessor.h" />
     <ClInclude Include="PlugProcessorVerifier.h" />
     <ClInclude Include="ProcessorVerifier.h" />

@@ -51,13 +51,7 @@
     <ClCompile Include="PlugImageInitialize.cpp">
       <Filter>Исходные файлы\Plugs</Filter>
     </ClCompile>
-    <ClCompile Include="PlugImageSave.cpp">
-      <Filter>Исходные файлы\Plugs</Filter>
-    </ClCompile>
     <ClCompile Include="IImageInitialize.cpp">
-      <Filter>Исходные файлы\Interfaces</Filter>
-    </ClCompile>
-    <ClCompile Include="IImageSave.cpp">
       <Filter>Исходные файлы\Interfaces</Filter>
     </ClCompile>
     <ClCompile Include="IDataSetSave.cpp">
@@ -113,16 +107,10 @@
     <ClInclude Include="PlugImageInitialize.h">
       <Filter>Файлы заголовков\Plugs</Filter>
     </ClInclude>
-    <ClInclude Include="PlugImageSave.h">
-      <Filter>Файлы заголовков\Plugs</Filter>
-    </ClInclude>
     <ClInclude Include="IDataSetSave.h">
       <Filter>Файлы заголовков\Interfaces</Filter>
     </ClInclude>
     <ClInclude Include="IImageInitialize.h">
-      <Filter>Файлы заголовков\Interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="IImageSave.h">
       <Filter>Файлы заголовков\Interfaces</Filter>
     </ClInclude>
     <ClInclude Include="PlugDataSetSave.h">

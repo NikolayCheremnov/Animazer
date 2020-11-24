@@ -1,25 +1,10 @@
 #include "AnimazerSystem.h"
 
-// first test constructor
-AnimazerSystem::AnimazerSystem()
-{
-	ID = "some_id";
-	// objects
-	lg = new Logger();
-	procObj = new PlugProcessor();
-	// actions
-	InitializeImageAction = new PlugImageInitialize();
-	SaveImageAction = new PlugImageSave();
-	SaveDataSetAction = new PlugDataSetSave();
-	LoadDataSetAction = new DataSetLoadAdapter();
-}
-
-AnimazerSystem::AnimazerSystem(string ID, Logger* lg, IImageInitialize* InitializeImageAction, IImageSave* SaveImageAction, IDataSetSave* SaveDataSetAction, IDataSetLoad* LoadDataSetAction, IProcessor* procObj)
+AnimazerSystem::AnimazerSystem(string ID, Logger* lg, IImageInitialize* InitializeImageAction, IDataSetSave* SaveDataSetAction, IDataSetLoad* LoadDataSetAction, IProcessor* procObj)
 {
 	this->ID = ID;
 	this->lg = lg;
 	this->InitializeImageAction = InitializeImageAction;
-	this->SaveImageAction = SaveImageAction;
 	this->SaveDataSetAction = SaveDataSetAction;
 	this->LoadDataSetAction = LoadDataSetAction;
 	this->procObj = procObj;
@@ -39,8 +24,6 @@ AnimazerSystem::~AnimazerSystem()
 	// actions
 	if (InitializeImageAction != nullptr)
 		delete InitializeImageAction;
-	if (SaveImageAction != nullptr)
-		delete SaveImageAction;
 	if (SaveDataSetAction != nullptr)
 		delete SaveDataSetAction;
 	if (LoadDataSetAction != nullptr)
@@ -52,11 +35,6 @@ void AnimazerSystem::PerformImageInitialization(string path)
 	if (imgObj != nullptr)
 		delete imgObj;
 	imgObj = InitializeImageAction->Initialize(path, lg);
-}
-
-void AnimazerSystem::PerformImageSaving(string path)
-{
-	SaveImageAction->Save(path, imgObj, lg);
 }
 
 void AnimazerSystem::PerformDataSetSaving(string path)
