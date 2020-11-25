@@ -9,8 +9,11 @@ private:
     char* imgData;              // interpreting an image as a set of bytes
 public:
     // constructors and destructor
-    PlugImage(string path);
+    PlugImage(string ID, string path);
     ~PlugImage();
+
+    // overloaded methods
+    int GetSize();
 
     // setters and getters
     char* GetImgData() { return imgData; }

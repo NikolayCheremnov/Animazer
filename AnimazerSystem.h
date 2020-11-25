@@ -2,7 +2,10 @@
 
 // common
 #include "Logger.h"
+
 #include "Image.h"
+#include "CompositeImages.h"
+
 #include "IImageInitialize.h"
 #include "IProcessor.h"
 #include "DataSet.h"
@@ -35,7 +38,7 @@ public:
 
 	// perform methods
 	void PerformImageInitialization(string path);
-	void PerformImageSaving(string path);
+	void PerformComplexImageInitialization(list<string> paths);
 	void PerformDataSetSaving(string path);
 	void PerformDataSetLoading(string path);
 	void PerformProcessorPreparing();

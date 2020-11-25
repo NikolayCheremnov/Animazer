@@ -1,12 +1,7 @@
 #include "Image.h"
 
-Image::Image()
+Image::Image(string ID, string path)
 {
-	ID = "undefined";
-}
-
-Image::Image(string path)
-{
-	ID = "undefined";
+	this->ID = ID;
 	this->path = path;
 }

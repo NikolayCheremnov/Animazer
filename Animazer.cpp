@@ -15,9 +15,11 @@ using namespace std;
 
 int main()
 {
+    list<string> paths = list<string>();
+    paths.push_back("testData\\fake_image_1.txt");
+    paths.push_back("testData\\fake_image_2.txt");
     AnimazerSystem* s;
-    // proxy banned
-    cout << "Adapter, decorator" << endl;
+    cout << "Adapter, decorator, composite" << endl;
     s = new AnimazerSystem("TestingStructuralPatterns", new Logger(),
         new PlugImageInitialize(),
         new PlugDataSetSave(), new ProxyDataSetLoad(),
@@ -29,6 +31,7 @@ int main()
         s->PerformImageProcessing();                                // processing
         s->setProcessor(new PlugProcessorVerifier("PlugProcessorVerifier", s->getProcessor())); // decoration
         s->PerformImageProcessing();                                // second processing
+        s->PerformComplexImageInitialization(paths);                // load image set (composite)
     }
     catch (exception ex) {
         cout << ex.what() << endl;

@@ -37,6 +37,15 @@ void AnimazerSystem::PerformImageInitialization(string path)
 	imgObj = InitializeImageAction->Initialize(path, lg);
 }
 
+void AnimazerSystem::PerformComplexImageInitialization(list<string> paths)
+{
+	if (imgObj != nullptr)
+		delete imgObj;
+	imgObj = new CompositeImages("ImageSet");
+	for (string path : paths)
+		imgObj->Add(InitializeImageAction->Initialize(path, lg));
+}
+
 void AnimazerSystem::PerformDataSetSaving(string path)
 {
 	SaveDataSetAction->Save(path, dsObj, lg);

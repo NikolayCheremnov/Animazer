@@ -4,7 +4,7 @@
 Image* PlugImageInitialize::Initialize(string path, Logger *lg)
 {
 	try {
-		PlugImage* initialized = new PlugImage(path);
+		PlugImage* initialized = new PlugImage("plug", path);
 		char* buf = new char[50];
 		ifstream fin(path);
 		fin >> buf;
