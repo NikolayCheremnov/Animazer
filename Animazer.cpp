@@ -32,6 +32,7 @@ int main()
         s->setProcessor(new PlugProcessorVerifier("PlugProcessorVerifier", s->getProcessor())); // decoration
         s->PerformImageProcessing();                                // second processing
         s->PerformComplexImageInitialization(paths);                // load image set (composite)
+        s->PerformComplexImageProcessing();                         // set processing
     }
     catch (exception ex) {
         cout << ex.what() << endl;

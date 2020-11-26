@@ -65,3 +65,13 @@ string AnimazerSystem::PerformImageProcessing()
 {
 	return procObj->Process(imgObj, lg);
 }
+
+list<string> AnimazerSystem::PerformComplexImageProcessing()
+{
+	list<string> res;
+	CompositeImagesIterator it((CompositeImages*)imgObj);
+	for (Image* img = it.Begin(); it.HasNext(); img = it.Next()) {
+		res.push_back(procObj->Process(img, lg));
+	}
+	return res;
+}

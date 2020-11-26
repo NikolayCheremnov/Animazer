@@ -20,8 +20,11 @@ public:
     // composite methods
     void Add(Image* img) { images.push_back(img); }
     bool RemoveWithID(string ID);   // return: true <=> removed, false <=> image does not exist in list
+    
+
+    // setters and getters
+    int GetImagesNumber() { return images.size(); }
     Image* GetImageWithID(string ID);
-
-
+    list<Image*> GetImageList() { return images; }
 };
 

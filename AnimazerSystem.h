@@ -5,6 +5,7 @@
 
 #include "Image.h"
 #include "CompositeImages.h"
+#include "CompositeImagesIterator.h"
 
 #include "IImageInitialize.h"
 #include "IProcessor.h"
@@ -43,6 +44,7 @@ public:
 	void PerformDataSetLoading(string path);
 	void PerformProcessorPreparing();
 	string PerformImageProcessing();
+	list<string> PerformComplexImageProcessing();
 
 	// setters and getters
 	IProcessor* getProcessor() { return procObj; }

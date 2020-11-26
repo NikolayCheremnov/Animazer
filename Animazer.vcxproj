@@ -142,9 +142,11 @@
     <ClCompile Include="Animazer.cpp" />
     <ClCompile Include="AnimazerSystem.cpp" />
     <ClCompile Include="CompositeImages.cpp" />
+    <ClCompile Include="CompositeImagesIterator.cpp" />
     <ClCompile Include="DataSetLoadAdapter.cpp" />
     <ClCompile Include="IDataSetLoad.cpp" />
     <ClCompile Include="IImageInitialize.cpp" />
+    <ClCompile Include="IImageIterator.cpp" />
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="IProcessor.cpp" />
     <ClCompile Include="PlugDataSet.cpp" />
@@ -163,10 +165,12 @@
   <ItemGroup>
     <ClInclude Include="AnimazerSystem.h" />
     <ClInclude Include="CompositeImages.h" />
+    <ClInclude Include="CompositeImagesIterator.h" />
     <ClInclude Include="DataSetLoadAdapter.h" />
     <ClInclude Include="IDataSetLoad.h" />
     <ClInclude Include="IDataSetSave.h" />
     <ClInclude Include="IImageInitialize.h" />
+    <ClInclude Include="IImageIterator.h" />
     <ClInclude Include="IProcessor.h" />
     <ClInclude Include="PlugDataSet.h" />
     <ClInclude Include="PlugDataSetLoad.h" />
