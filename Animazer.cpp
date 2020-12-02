@@ -10,6 +10,7 @@
 #include "PlugImageInitialize.h"
 #include "PlugDataSetSave.h"
 #include "PlugProcessor.h"
+#include "DataSetLoadAdapter.h"
 
 using namespace std;
 
@@ -22,7 +23,7 @@ int main()
     cout << "Adapter, decorator, composite" << endl;
     s = new AnimazerSystem("TestingStructuralPatterns", new Logger(),
         new PlugImageInitialize(),
-        new PlugDataSetSave(), new ProxyDataSetLoad(),
+        new PlugDataSetSave(), new ProxyDataSetLoad("proxy", new DataSetLoadAdapter()),
         new PlugProcessor());
     try {
         s->PerformImageInitialization("testData\\fake_image.txt");  // load image

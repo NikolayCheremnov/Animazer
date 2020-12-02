@@ -16,8 +16,8 @@ public:
         if (processor != nullptr)
             delete processor;
     }
-    // virtual override
-    virtual void ProcessorPreparing(DataSet* data, Logger* lg) = 0;
-    virtual string Process(Image* processed, Logger* lg) = 0;
+    // virtual override (maybe you don't need to)
+    //virtual void ProcessorPreparing(DataSet* data, Logger* lg) = 0;
+    //virtual string Process(Image* processed, Logger* lg) = 0;
 };
 

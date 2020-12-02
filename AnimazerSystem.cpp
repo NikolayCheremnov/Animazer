@@ -39,11 +39,13 @@ void AnimazerSystem::PerformImageInitialization(string path)
 
 void AnimazerSystem::PerformComplexImageInitialization(list<string> paths)
 {
+	lg->log(__FUNCTION__, "system", "complex image initialization", ID, "initialization started");
 	if (imgObj != nullptr)
 		delete imgObj;
 	imgObj = new CompositeImages("ImageSet");
 	for (string path : paths)
 		imgObj->Add(InitializeImageAction->Initialize(path, lg));
+	lg->log(__FUNCTION__, "system", "complex image initialization", ID, "initialization ended successful");
 }
 
 void AnimazerSystem::PerformDataSetSaving(string path)
@@ -68,10 +70,12 @@ string AnimazerSystem::PerformImageProcessing()
 
 list<string> AnimazerSystem::PerformComplexImageProcessing()
 {
+	lg->log(__FUNCTION__, "system", "complex image processing", ID, "processing started");
 	list<string> res;
 	CompositeImagesIterator it((CompositeImages*)imgObj);
 	for (Image* img = it.Begin(); it.HasNext(); img = it.Next()) {
 		res.push_back(procObj->Process(img, lg));
 	}
+	lg->log(__FUNCTION__, "system", "complex image processing", ID, "processing ended successful");
 	return res;
 }

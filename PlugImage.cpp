@@ -12,10 +12,6 @@ PlugImage::~PlugImage()
 		delete []imgData;
 }
 
-int PlugImage::GetSize()
-{
-	return string(imgData).length();
-}
 
 void PlugImage::SetImgData(char* val)
 {

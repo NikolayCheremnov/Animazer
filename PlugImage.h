@@ -13,7 +13,6 @@ public:
     ~PlugImage();
 
     // overloaded methods
-    int GetSize();
 
     // setters and getters
     char* GetImgData() { return imgData; }

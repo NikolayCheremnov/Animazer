@@ -15,7 +15,6 @@ public:
     ~CompositeImages();
 
     // overloaded methods
-    int GetSize();
 
     // composite methods
     void Add(Image* img) { images.push_back(img); }

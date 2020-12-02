@@ -2,7 +2,7 @@
 
 PlugProcessor::PlugProcessor()
 {
-    ID = "some_id";
+    ID = "plug";
 }
 
 void PlugProcessor::ProcessorPreparing(DataSet* data, Logger* lg)

@@ -1,11 +1,5 @@
 #include "ProxyDataSetLoad.h"
 
-ProxyDataSetLoad::ProxyDataSetLoad()
-{
-	ID = "someID";
-	LoadDataSetAction = new DataSetLoadAdapter();
-}
-
 ProxyDataSetLoad::ProxyDataSetLoad(string ID, IDataSetLoad* LoadDataSetAction)
 {
 	this->ID = ID;

@@ -11,6 +11,6 @@
 class IImageInitialize
 {
 public:
-	virtual Image* Initialize(std::string path, Logger *lg) = 0;
+	virtual Image* Initialize(std::string path, Logger* lg) = 0;
 };
 

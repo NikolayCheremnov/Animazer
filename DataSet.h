@@ -9,7 +9,7 @@ class DataSet
 {
 protected:
 	string ID;
-	list<Image *> Images;
+	list<Image* > Images;
 
 public:
 	// constructors and destructor
@@ -18,6 +18,6 @@ public:
 	// setters and getters
 	list<Image*> GetImages() { return Images; }
 	// methods
-	void AddImage(Image *img); 
+	void AddImage(Image* img); 
 };
 

@@ -10,14 +10,6 @@ CompositeImages::~CompositeImages()
         delete img;                 // delete all images
 }
 
-int CompositeImages::GetSize()
-{
-    int size = 0;
-    for (Image* img : images)
-        size += img->GetSize();
-    return size;
-}
-
 bool CompositeImages::RemoveWithID(string ID)
 {
     Image* removable = GetImageWithID(ID);
